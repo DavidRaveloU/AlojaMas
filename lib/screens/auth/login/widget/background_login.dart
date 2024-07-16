@@ -1,7 +1,10 @@
+import 'dart:math';
+
+import 'package:alojamas/utils/theme/app_colors.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:math';
 
 class BackgroundLogin extends StatelessWidget {
   const BackgroundLogin({
@@ -78,10 +81,13 @@ Widget backgroundLoginText(BuildContext context) {
         right: screenWidth * 0.1,
         child: Container(
           padding: const EdgeInsets.all(8.0),
-          child: Text(
-            'Inicia sesión en tu\ncuenta',
+          child: AutoSizeText(
+            'INICIA SESIÓN CON TU\nCUENTA',
+            maxLines: 2,
+            maxFontSize: 40,
+            minFontSize: 8,
             style: GoogleFonts.poppins(
-              fontSize: screenWidth * 0.08,
+              fontSize: screenWidth * 0.06,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
@@ -90,18 +96,20 @@ Widget backgroundLoginText(BuildContext context) {
         ),
       ),
       Positioned(
-        top: screenHeight * 0.25,
+        top: screenHeight * 0.23,
         left: screenWidth * 0.05,
         right: screenWidth * 0.05,
         child: Container(
           padding: const EdgeInsets.all(2.0),
           alignment: Alignment.center,
-          child: Text(
+          child: AutoSizeText(
             'Ingrese su correo electrónico y contraseña para iniciar sesión',
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
             style: GoogleFonts.poppins(
-              fontSize: screenWidth * 0.04,
+              fontSize: screenWidth * 0.038,
               fontWeight: FontWeight.w400,
-              color: Colors.white,
+              color: AppColors.backgroundLight.withOpacity(0.7),
             ),
             textAlign: TextAlign.center,
           ),
