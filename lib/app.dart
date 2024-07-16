@@ -1,3 +1,4 @@
+import 'package:alojamas/screens/auth/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/home/home_screen.dart';
@@ -9,7 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
